@@ -1,38 +1,95 @@
 .App {
-  text-align: center;
+  padding-left: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Change font*/
+div#root {
+  font-family: Comic Sans MS;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*Board the content of blog post*/
+.post1>span,
+.post2>span,
+.post3>span {
+  border: solid black;
+  display: inline-block;
+  width: 70%;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+span h3,
+.post1 p:last-child,
+.post2 p:last-child,
+.post3 p:last-child {
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.post1 #red {
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#bold {
+  font-weight: bold;
+}
+
+/*Create box inside the board*/
+div.box {
+  position: absolute;
+  border: 2px solid black;
+  display: inner-block;
+  margin-top: 5px;
+  width: 70px;
+  right: 30.2%;
+  height: 70px;
+}
+
+/*First gray diagonal line */
+.box::after {
+  content: "";
+  position: absolute;
+  border-top: 3px solid gray;
+  width: 98px;
+  transform: rotate(45deg);
+  transform-origin: left;
+}
+
+/*Second gray diagonal line */
+.box::before {
+  content: "";
+  position: absolute;
+  border-top: 3px solid gray;
+  top: 20px;
+  left: -20px;
+  width: 98px;
+  transform: rotate(-45deg);
+  transform-origin: 70%;
+}
+
+/*Positioning "Latest" section*/
+.latest {
+  position: absolute;
+  top: 27px;
+  right: 15%;
+}
+
+/*Stye for the line under latest section*/
+.line {
+  position: absolute;
+  border-top: 3px solid black;
+  width: 11%;
+  top: 250px;
+  right: 15%;
+}
+
+/*Positioning "Popular" section*/
+.popular {
+  position: absolute;
+  top: 250px;
+  right: 15%;
+}
+
+#login {
+  margin-right: 5px;
+  position: relative;
+  float: right;
 }
