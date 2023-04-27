@@ -8,24 +8,17 @@ div#root {
 }
 
 /*Board the content of blog post*/
-.post1>span,
-.post2>span,
-.post3>span {
+.post {
   border: solid black;
   display: inline-block;
   width: 70%;
   position: relative;
+  margin-bottom: 20px;
 }
 
 span h3,
-.post1 p:last-child,
-.post2 p:last-child,
-.post3 p:last-child {
+.post p:last-child {
   margin: 0;
-}
-
-.post1 #red {
-  color: red;
 }
 
 #bold {
@@ -33,13 +26,13 @@ span h3,
 }
 
 /*Create box inside the board*/
-div.box {
+.box {
   position: absolute;
   border: 2px solid black;
   display: inner-block;
   margin-top: 5px;
   width: 70px;
-  right: 30.2%;
+  right: 1%;
   height: 70px;
 }
 
@@ -66,7 +59,7 @@ div.box {
 }
 
 /*Positioning "Latest" section*/
-.latest {
+#latest-sidebar .sidebar {
   position: absolute;
   top: 27px;
   right: 15%;
@@ -82,7 +75,7 @@ div.box {
 }
 
 /*Positioning "Popular" section*/
-.popular {
+#popular-sidebar .sidebar {
   position: absolute;
   top: 250px;
   right: 15%;
